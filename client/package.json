@@ -2,6 +2,8 @@
   "name": "training",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://localhost:3001",
+  "main": "server.js",
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
@@ -38,7 +40,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-
+  },
+  "engines": {
+    "node": "13.5.0"
   },
   "eslintConfig": {
     "extends": "react-app"

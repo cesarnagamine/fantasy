@@ -5,6 +5,7 @@ require('dotenv/config');
 const nodemailer = require('nodemailer');
 const smtpTransport = require('nodemailer-smtp-transport');
 const cors = require('cors');
+const path = require('path');
 
 
 const port = process.env.PORT || 3001;
