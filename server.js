@@ -2,30 +2,28 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 require('dotenv/config');
+const cors = require('cors');
 const nodemailer = require('nodemailer');
 const smtpTransport = require('nodemailer-smtp-transport');
-const cors = require('cors');
 const path = require('path');
-
 
 const port = process.env.PORT || 3001;
 
+app.use(cors());
+app.use(express.json());
+
 //Middlewares:
 //Ejecuta este código automáticamente con la aplicación.
-
-app.use(express.json());
-app.use(cors());
 app.use('/public', express.static(__dirname + '/public'));
 
 //Routes:
 //Importa archivo 'posts' desde el folder 'routes'
 //Usa las rutas del archivo 'posts' para el endpoint '/posts'
-
 const postRoute = require('./routes/posts');
 app.use('/posts', postRoute);
 
 
-//NODEMAILER: post request to send emails authomatically using nodemailer
+//Post request to send emails authomatically using nodemailer
 //Triggerd from the 'Form' component handleSubmit() function:
 app.post('/api/form', (req, res) => {
     console.log(req.body);
@@ -37,6 +35,7 @@ app.post('/api/form', (req, res) => {
             pass: 'codingpath2020'
         }
     }));
+
     //Get the data from the 'handleSubmit()' function from the Form component:
     const mailOptions = {
         from: req.body.user.name,
@@ -44,6 +43,7 @@ app.post('/api/form', (req, res) => {
         subject: req.body.user.subject,
         text: req.body.user.message
     };
+
     //Use transporter to send 'mailOptions' data, if there's an error
     //print it in the console, otherwise print the 'mailOptions' data:
     transporter.sendMail(mailOptions, function (err, info) {
@@ -52,14 +52,9 @@ app.post('/api/form', (req, res) => {
         else
             console.log(info);
     });
+
 });
 
-
-//Database Connection:
-//Usa en método 'connect' del objeto 'mongoose' para conectarse
-//a la base de datos (1er argumento: Date Base URL, 
-//2do argumento: prefixes requeridos). Después de conectar pintar en 
-//consola string. Si hay algun error, pintarlo en consola.
 mongoose.connect(process.env.DB_CONNECTION, {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -70,7 +65,7 @@ mongoose.connect(process.env.DB_CONNECTION, {
     console.error('Error!', err)
 });
 
-//SERVER.JS ADDED FOR DEPLOYMENT:
+//ADDED FOR DEPLOYMENT:
 if (process.env.NODE_ENV === 'production') {
 
     app.use(express.static('client/build'));
@@ -81,4 +76,4 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.listen(port);
-console.log('Listening 3001');
+console.log('3001');
