@@ -3,12 +3,12 @@ const router = express.Router();
 const Users = require('../models/Users');
 console.log(Users);
 
-//GET posts from the Database:
+//GET all posts from the Database:
 router.get('/', async (req, res) => {
     try {
         const posts = await Users.find();
         res.json(posts);
-        console.log('Got the files!');
+        console.log('Got them!');
     } catch (err) {
         res.json({ message: err });
     }
@@ -21,7 +21,7 @@ router.get('/:postId', async (req, res) => {
             req.params.postId
         );
         res.json(posts);
-        console.log('Got the file!');
+        console.log('Got it!')
     } catch (err) {
         res.json({ message: err });
     }
@@ -53,7 +53,7 @@ router.delete('/:postId', async (req, res) => {
             _id: req.params.postId
         });
         res.json(removedPost);
-        console.log('File deleted!');
+        console.log('Deleted!')
     } catch (err) {
         res.json({ message: err });
     }
@@ -67,15 +67,18 @@ router.patch('/:postId', async (req, res) => {
             {
                 $set: {
                     name: req.body.name,
-                    email: req.body.email
+                    email: req.body.email,
+                    subject: req.body.subject,
+                    message: req.body.message
                 }
             }
         );
         res.json(updatedPost);
-        console.log('Updated file!');
     } catch (err) {
         res.json({ message: err });
     }
 });
+
+
 
 module.exports = router;
