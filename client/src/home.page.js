@@ -17,7 +17,7 @@ export const AppLayout = props => {
 
                 <header id="header">
                     <nav>
-                        <a href="#banner">Inicio</a>
+                     
                         <a href="#portfolio" >Portafolio</a>
                         <a href="#footer" >Escríbenos</a>
                         <a href="/" >Log Out</a>
@@ -56,7 +56,7 @@ export const AppLayout = props => {
                 <section id="four" className="wrapper alt style1">
                         <div className="inner">
                             <h2 className="major">Nuestro Socios Estratégicos</h2>
-                            <p>Trabajamos con proveedores de larga experiencia y alta innovación en el mercado para servirles de la manera más eficiente y rápida.</p>
+                            <p>Trabajamos con proveedores de larga experiencia y alta innovación en el mercado global para servirles de la manera más eficiente y rápida.</p>
                             <section className="features">
                                 <article>
                                     <a href="https://investor.vanguard.com/corporate-portal/" className="image" target='blank'><img src="images/vanguard.jpg" alt="The Vanguard Group" /></a>
@@ -80,7 +80,8 @@ export const AppLayout = props => {
                 <section id="footer">
                     <div className="inner">
                         <h2 className="major">Contáctate con nosotros</h2>
-                        <p>Responderemos a su mensaje en menos de 24 horas. Una copia del mensaje será enviado automáticamente a su correo eletrónico. Esperamos poder trabajar pronto en sus planes de inversión y retiro.</p>
+                        <p>Para contactarse conmigo, por favor hacerlo a través del formulario de mi página de desarrollador. Este formulario 
+                        registra el mail en la base de datos -Cluster en MongoDB Atlas-, pero Gmail bloqueará la salida del mail.</p>
                         <MailForm />
                         <ul className="contact">
                             <li className="icon solid fa-home">

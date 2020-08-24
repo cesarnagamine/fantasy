@@ -2,6 +2,7 @@ import React from "react";
 import auth from "./auth";
 import GoogleLogin from 'react-google-login';
 
+
 export const LandingPage = props => {
     console.log(props)
     console.log(auth)
