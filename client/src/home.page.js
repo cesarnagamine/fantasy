@@ -30,7 +30,7 @@ export const AppLayout = (props) => {
               {auth.authObj.profileObj.familyName}!
             </h2>
             <p>
-              Te invitamos a ser parte de la forma más transparente de invertir.
+              Te invitamos a ser parte de la forma más inteligente de invertir.
             </p>
           </div>
         </section>
@@ -121,11 +121,11 @@ export const AppLayout = (props) => {
                 Lima, Peru.
               </li>
               <li className="icon brands fa-facebook-f">
-                <a href="#">Ken NT</a>
+                <a href="https://www.facebook.com/ken.naga.90/" target="blank">Ken NT</a>
               </li>
-              <li className="icon solid fa-phone">(007) 987-654-321</li>
+              <li className="icon solid fa-phone">987-539-441</li>
               <li className="icon solid fa-envelope">
-                <a href="#">information@naga.co.tld</a>
+                <a href="#">cesarnagamine@gmail.com</a>
               </li>
             </ul>
             <ul className="copyright">

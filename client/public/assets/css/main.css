@@ -168,7 +168,7 @@ textarea {
 }
 
 body {
-  -ms-overflow-style: scrollbar;
+  /* -ms-overflow-style: scrollbar; */
 }
 
 @media screen and (max-width: 480px) {
@@ -3329,6 +3329,7 @@ button:disabled,
   -webkit-transition: -webkit-filter 0.25s ease;
   -ms-transition: -ms-filter 0.25s ease;
   transition: filter 0.25s ease;
+  /* background-image: url('./images/loginbg.jpg'); */
 }
 
 #menu {
@@ -3570,7 +3571,7 @@ body.is-menu-visible #menu .inner {
         rgba(46, 49, 65, 0.8),
         rgba(46, 49, 65, 0.8)
       ),
-      url('../../images/bg.jpg');
+      url('../../images/loginbg.jpg');
     background-size: auto, cover;
     background-position: center, center;
     margin-bottom: -6.5em;
