@@ -30,14 +30,14 @@ class MailForm extends React.Component {
         };
 
         // AXIOS post to use the post request from nodemailer at 'server.js' file:
-        axios.post('http://localhost:3001/api/form', { user })
+        axios.post('https://fantasycompany.herokuapp.com/api/form', { user })
             .then(res => {
                 console.log(res);
                 console.log(res.data);
             })
 
         // AXIOS post to use the post request from routes on 'routes/posts.js' file:
-        axios.post('http://localhost:3001/posts', { user })
+        axios.post('https://fantasycompany.herokuapp.com/posts', { user })
             .then(res => {
                 console.log(res);
                 console.log(res.data);
