@@ -15,10 +15,13 @@ export const Portfolio = () => {
 
                         <div className="inner">
                             <h2>Portafolio</h2>
-                            <p>Nuestro portafolio se centra en una diversificación basada en acciones, bonos y bienes raíces.</p>
+                
+                            <p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
+
 
                         </div>
                     </header>
+
                     <Stock />
                     <br/>
                     <Stock1 />

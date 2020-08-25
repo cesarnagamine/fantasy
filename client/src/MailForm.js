@@ -68,14 +68,14 @@ class MailForm extends React.Component {
 
                     <form method="post" action="send" onSubmit={this.handleSubmit}>
                         <div className="row">
-                            <div className="col-6 col-12-small">
+                            <div className="col-12">
                                 <input type="text"
                                     name="name"
                                     id="name"
                                     placeholder="Nombre"
                                     onChange={this.handleChange} />
                             </div>
-                            <div className="col-6 col-12-small">
+                            <div className="col-12">
                                 <input type="text"
                                     name="email"
                                     id="email"
